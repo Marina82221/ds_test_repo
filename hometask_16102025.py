@@ -59,7 +59,7 @@
 #     if letter in vowels:
 #         print(i, letter)
 
-# Квакушки на болоте
+# Квакушки на болоте, прыгают
 
 # frog = 'Лягушка'
 # for i in range(1,4):
