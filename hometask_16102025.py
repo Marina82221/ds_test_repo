@@ -29,6 +29,17 @@
 #         print("Мало!")
 #         my_nummer = int(input())
 
+# # вариант проще от Антона
+# nummer = 7
+# while True:
+#     my_nummer = int(input('Введите число: '))
+#     if my_nummer == nummer:
+#         print("Верно!")
+#         break
+#     elif my_nummer > nummer:
+#         print("Много!")
+#     else:
+#         print("Мало!")
  
     
 # Гласные под прицелом
@@ -39,6 +50,14 @@
 #     for j in range(0,len(vowels)):
 #         if word[i] == vowels[j]:
 #             print(i, letter)
+
+# вариант проще от Антона
+
+# word = input('Введите своё слово: ')
+# vowels = "аеёиоуыэюя"
+# for i, letter in enumerate(word):
+#     if letter in vowels:
+#         print(i, letter)
 
 # Квакушки на болоте
 
