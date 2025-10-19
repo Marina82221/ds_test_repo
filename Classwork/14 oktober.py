@@ -70,7 +70,7 @@
 #         #print(value)
 #     print(f'Сумма строки: {row_sum}')
 
-# досрочное завершение цикла - break
+# досрочное завершение цикла - break, использовать только там, где это необходимо, много раз не использовать
 
 # saved_pwd = 'right'
 # while True:
@@ -78,8 +78,100 @@
 #         print('Пароль принят')
 #         break
 
+# можно использовать флаги
+# for i in range(1, 6):
+#     for j in range(1, 6):
+#         val = i * j
+#         if val == 16:
+#             print('Ого 16!')
+#         print(f'{i} x {j} = {val}')
+
+# flag = False
+# for i in range(1, 6):
+#     for j in range(1, 6):
+#         val = i * j
+#         if val == 12:
+#             print('Ого 12!')
+#             flag = True
+#             break
+#         print(f'{i} x {j} = {val}')
+#     if flag == True: # можно записать 'if flag:', тк условный оператор по умолчанию равен True
+#         break
+        
+
 # бесконечный цикл
 # x =0
 # while True:
 #     print(x+1)
+
+# оператор continue
+
+
+# for i in range(1, 6):
+#     for j in range(1, 6):
+#         val = i * j
+#         if i == j:
+#             continue
+#         print(f'{i} x {j} = {val}')
+
+# esle в циклах используется, если цикл завершился ЕСТЕСТВЕННО
+# для while - если нарушилось условие продолжения
+# для for - когда закончились переменные в последовательности
+
+# while input('Введите строку (СТОП для завершения)') != 'СТОП':
+#     pass
+# else:
+#     print('Цикл завершен')
+
+# # ":=" моржовый оператор
+# # break - НЕЕСТЕСТВЕННОЕ завершение цикла, после него else НЕ выполняется
+# while (text:= input('Введите строку (СТОП для завершения)')) != 'СТОП':
+#     if text == 'ignore_else':
+#         break
+# else:
+#     print('Цикл завершен')
+
+# # условие для ограничения кол-ва вводов
+# tries = 0
+# while (text:= input('Введите строку (СТОП для завершения)')) != 'СТОП':
+#     tries += 1
+#     if tries == 3:
+#         break
+# else:
+#     print('Цикл завершен')
+
+# УПОРЯДОЧЕННЫЕ коллекции (последовательность символов, упорядоченная последовательность)
+
+# text = input('Введите строку: ')
+# i = int(input('Введите индекс символа: '))
+# if i < len(text):
+#     print(text[i])
+# else:
+#     print('Индекс не входит')
+
+# text = input()
+# # print(text[len(text)-1]) # сложная запись
+# print(text[-1])            # простая запись
+          
+# пройти по коллекции можно: по индексам(for + range), по значениям, по индексам и значениям одновременно
+
+# text = input()
+# for i in range(len(text)):
+#     print(text[i])
+
+# # по индексам
+# text = input()
+# for i in range(len(text)):
+#     print(text[i].upper())
+
+# # по значениям
+# text = input()
+# for letter in text:
+#     print(letter.upper())
+
+# # по значениям и индексам - enumerate
+# text = 'Marina'
+# for i, letter in enumerate(text):
+#     print(i, letter)
+
 
