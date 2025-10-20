@@ -97,5 +97,17 @@
 # print(f'Среднее арифметическое = {num_middle}')
 # print(f'Числа меньше среднего арифметического по возрастанию = {new_nums}')
 
+# вариант Антона
+# nums = [15, 2, 30, 4, 50, 6, 75, 8]
+# new_nums = []
 
+# for i in range(len(nums)):
+#     if nums[i] < (sum(nums) / len(nums)):
+#         new_nums.append(nums[i])
+# new_nums.sort()
+
+# print(f'Минимальное число в списке = {min(nums)}')
+# print(f'Максимальное число в списке = {max(nums)}')
+# print(f'Среднее арифметическое = {sum(nums) / len(nums)}')
+# print(f'Числа меньше среднего арифметического по возрастанию = {new_nums}')
 
