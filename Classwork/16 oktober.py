@@ -271,3 +271,10 @@
 
 # for key, values in countries_and_capitols.items():
 #     print(key, values)
+
+# # str
+
+# s = ('jfhbdshgvhtbybhdjfvb')
+# d = s.partition('bd')
+# print(d)
+# print(type(d))
