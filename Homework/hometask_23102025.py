@@ -126,7 +126,8 @@
 #     print(f'Столица {v} находится в стране {k}')
 
 
-# # NEW
+# # NEW_1
+
 # countries = {
 #     "Россия": "Москва",
 #     "Италия": "Рим",
@@ -141,6 +142,22 @@
 
 
 # dictionary(countries)
+
+# # NEW_2
+
+# countries = {
+#     "Россия": "Москва",
+#     "Италия": "Рим",
+#     "Испания": "Мадрид"
+# }
+
+# def dictionary(countries, key, new_value):
+#     countries[key] = new_value
+#     for country, city in countries.items():
+#         print(f'Столица {city} находится в стране {country}')
+
+# dictionary(countries, "Германия", "Берлин")
+# dictionary(countries, "Испания", "Барселона")
 
 
 # 7. Подсчёт букв
