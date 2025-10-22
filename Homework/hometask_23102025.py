@@ -164,22 +164,22 @@
 
 
 # # OLD
-# word = "программирование"
-# vowels = {'а', 'о', 'у', 'э', 'и', 'ы', 'е', 'ё', 'ю', 'я'}
-# s_word = set(word)
+word = "программирование"
+vowels = {'а', 'о', 'у', 'э', 'и', 'ы', 'е', 'ё', 'ю', 'я'}
+s_word = set(word)
 
-# print(f'Уникальных букв в слове "Программирование" =  {len(s_word)}')
-# print(s_word & vowels)
+print(f'Уникальных букв в слове "Программирование" =  {len(s_word)}')
+print(s_word & vowels)
 
-# # NEW
+# NEW
 
-# vowels = {'а', 'о', 'у', 'э', 'и', 'ы', 'е', 'ё', 'ю', 'я'}
-# def how_many_vowels(word):
-#     word = set(word)
-#     print(f'Уникальных букв в слове "Программирование" =  {len(word)}')
-#     print(word & vowels)
+vowels = {'а', 'о', 'у', 'э', 'и', 'ы', 'е', 'ё', 'ю', 'я'}
+def how_many_vowels(word):
+    print(f'Уникальных букв в слове "{word}" =  {len(set(word))}')
+    word = set(word)
+    print(word & vowels)
 
-# how_many_vowels("программирование")
+how_many_vowels("программирование")
 
 # 8. Обратный словарь
 
