@@ -18,11 +18,34 @@
 # print(avg)
 # print(num)
 
-# ГЕНЕРАТОРЫ - экономят ресурсы, предоставляют данные только по запросу
+# ГЕНЕРАТОРЫ -итератор, элементы которого можно итерировать ОДИН РАЗ, 
+# итеатор - объект,кот. поддерж. ф-ию next(), помнит,какой элемент следующий
+# итерируемый объект(список) - предоставляет возможность обойти поочередно свои элементы,
+# его можно преобразовать к итератору
+# экономят ресурсы, предоставляют данные только по запросу
 # записываются в КРУГЛЫЕ скобки
+# вызываются фукцией next()
+# НЕЛЬЗЯ применить len, index
 
-# num = (int(input()) for i in range(5))
-# print(num) # <generator object <genexpr> at 0x0000027DECB8C820>
+# s = [1, 2, 3]
+# # next(s) # TypeError: 'list' object is not an iterator
+# d = iter(s)
+# #print(type(d))
+# print(next(d))
+# print(next(d))
+# print(next(d))
+# # print(next(d)) # StopIteration
+
+# #num = (int(input()) for i in range(5))
+# nums = (i * 5 for i in range(5))
+# #print(num) # <generator object <genexpr> at 0x0000027DECB8C820>
+# #list(nums)
+# print(next(nums))
+# print(next(nums))
+# print(next(nums))
+# print(next(nums))
+# print(next(nums))
+
 
 # матрица
 
@@ -238,3 +261,5 @@
 # print(final_price(1000, 500, 200, 50, 800, discount=5, price_low=200)) # [950.0, 475.0, 190.0, 760.0]
 # print(final_price(1000, 500, 200, 50, 800, discount=5, price_high=500)) # [475.0, 190.0, 47.5]
 # print(final_price(1000, 500, 200, 50, 800, discount=5, price_low=200, price_high=350)) # [190.0]
+
+

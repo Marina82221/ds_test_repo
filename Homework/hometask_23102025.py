@@ -160,26 +160,45 @@
 # dictionary(countries, "Испания", "Барселона")
 
 
+# # New_3
+
+# def dictionary(countries, key, new_value):
+#     countries[key] = new_value
+#     return countries
+
+
+# countries = {
+#     "Россия": "Москва",
+#     "Италия": "Рим",
+#     "Испания": "Мадрид"
+# }
+
+# countries = dictionary(countries, "Германия", "Берлин")
+# countries = dictionary(countries, "Испания", "Барселона")
+
+# for country, city in countries.items():
+#         print(f'Столица {city} находится в стране {country}')
+
 # 7. Подсчёт букв
 
 
 # # OLD
-word = "программирование"
-vowels = {'а', 'о', 'у', 'э', 'и', 'ы', 'е', 'ё', 'ю', 'я'}
-s_word = set(word)
+# word = "программирование"
+# vowels = {'а', 'о', 'у', 'э', 'и', 'ы', 'е', 'ё', 'ю', 'я'}
+# s_word = set(word)
 
-print(f'Уникальных букв в слове "Программирование" =  {len(s_word)}')
-print(s_word & vowels)
+# print(f'Уникальных букв в слове "Программирование" =  {len(s_word)}')
+# print(s_word & vowels)
 
-# NEW
+# # NEW
 
-vowels = {'а', 'о', 'у', 'э', 'и', 'ы', 'е', 'ё', 'ю', 'я'}
-def how_many_vowels(word):
-    print(f'Уникальных букв в слове "{word}" =  {len(set(word))}')
-    word = set(word)
-    print(word & vowels)
+# vowels = {'а', 'о', 'у', 'э', 'и', 'ы', 'е', 'ё', 'ю', 'я'}
+# def how_many_vowels(word):
+#     print(f'Уникальных букв в слове "{word}" =  {len(set(word))}')
+#     word = set(word)
+#     print(word & vowels)
 
-how_many_vowels("программирование")
+# how_many_vowels("программирование")
 
 # 8. Обратный словарь
 
