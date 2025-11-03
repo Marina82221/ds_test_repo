@@ -42,21 +42,62 @@
 # else:
 #     print('Джо', 'Пицца', 'За углом', 'Итальянский', 'Шеф')
 
-# # другой вариант
-# vet = input('Будет ли на ужине вегетарианец?: ')
-# van = input('Будет ли на ужене веганец?:  ')
-# glu = input('Будет ли на ужене приверженец глютеновой диеты?: ')
-# a1 = 'Изысканные гамбургеры'
-# a2 = 'Центральная пиццерия'
-# a3 = 'Кафе за углом'
-# a4 = 'Бюда итальянской мамы'
-# a5 = 'Кухня шеф-повара'
-# if vet == 'нет' and van == 'нет' and glu == 'нет':
-#     print(a1,a2,a3,a4,a5,sep='\n')
-# elif vet == 'да' and van == 'да' and glu == 'да':
-#     print(a3,a5,sep='\n')
-# elif vet == 'да' and van == 'нет' and glu == 'нет':
-#     print(a2,a3,a4,a5,sep='\n')
-# elif vet == 'да' and van == 'нет' or van =='да' and glu == 'да':
-#     print(a2,a3,a5,sep='\n')
+# # решение с помощью ООП
+
+# class Restaurant:
+#     def __init__(self, name, veget, vegan, no_gluten):
+#         self.name = name
+#         self.veget = veget
+#         self.vegan = vegan
+#         self.no_gluten = no_gluten
+
+#     def is_suitable(self, has_veget, has_vegan, has_no_gluten):
+#         if has_veget and not self.veget:
+#            return False
+#         if has_vegan and not self.vegan:
+#            return False
+#         if has_no_gluten and not self.no_gluten:
+#            return False 
+#         return True
+
+# class RestaurantSelector:
+#     def __init__(self):
+#         self.restaurants = [
+#             Restaurant("Изысканные гамбургеры от Джо", False, False, False),
+#             Restaurant("Центральная пиццерия", True, False, True),
+#             Restaurant("Кафе за углом", True, True, True),
+#             Restaurant("Блюда от итальянской мамы", True, False, False),
+#             Restaurant("Кухня шеф-повара", True, True, True)]
+
+#     def get_user_preferences(self):
+#         has_veget = input("Будет ли на ужине вегетарианец? ").strip().lower() == "да"
+#         has_vegan = input("Будет ли на ужине веганец? ").strip().lower() == "да"
+#         has_no_gluten = input("Будет ли на ужине приверженец безглютеновой диеты? ").strip().lower() == "да"
+        
+#         return has_veget, has_vegan, has_no_gluten
+
+#     def find_restaurant(self, has_veget, has_vegan, has_no_gluten):
+        
+#         place = []
+#         for restaurant in self.restaurants:
+#             if restaurant.is_suitable(has_veget, has_vegan, has_no_gluten):
+#                 place.append(restaurant.name)
+#         return place
+
+#     def run(self):
+#         print("Селектор ресторанов для встречи выпускников")
+#         has_veget, has_vegan, has_no_gluten = self.get_user_preferences()
+#         suitable_restaurants = self.find_restaurant(has_veget, has_vegan, has_no_gluten)
+
+#         print("Подходящие рестораны:")
+#         if suitable_restaurants:
+#             for restaurant in suitable_restaurants:
+#                 print(restaurant)
+#         else:
+#             print("К сожалению, нет ресторанов")
+
+# if __name__ == "__main__":
+#     selector = RestaurantSelector()
+#     selector.run()
+
 
